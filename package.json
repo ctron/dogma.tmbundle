@@ -36,6 +36,7 @@
     "convert": "npx js-yaml syntaxes/dogma.tmLanguage.yaml > syntaxes/dogma.tmLanguage.json"
   },
   "devDependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "vsce": "^2.15.0"
   }
 }

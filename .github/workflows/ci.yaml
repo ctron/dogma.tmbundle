@@ -21,3 +21,5 @@ jobs:
       - name: Ensure there the conversion was up-to-date
         run: |
           git diff --exit-code
+
+      - run: npx vsce package
