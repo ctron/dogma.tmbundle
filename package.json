@@ -1,0 +1,15 @@
+{
+  "name": "seedwing-dogma-tmbundle",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "url": "https://github.com/ctron/dogma.tmBundle"
+  },
+  "scripts": {
+    "convert": "npx js-yaml syntaxes/dogma.tmLanguage.yaml > syntaxes/dogma.tmLanguage.json"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

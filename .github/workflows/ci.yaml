@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run convert
+
+      - name: Ensure there the conversion was up-to-date
+        run: |
+          git diff --exit-code
