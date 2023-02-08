@@ -1,0 +1,31 @@
+// what is the meaning of "valid"?
+
+pattern valid = dependency && not-vulnerable
+
+pattern not-vulnerable = {
+    purl: uri::purl(openvex::from-purl(openvex::not-affected)),
+}
+
+// pattern valid = dependency && (quarkus || redhat)
+
+pattern quarkus = {
+    purl: uri::purl({
+        namespace: "io.quarkus",
+    })
+}
+
+pattern redhat = {
+    purl: uri::purl({
+        version: string::regexp<"\.redhat-\d+$">,
+    })
+}
+
+pattern dependency = {
+    purl: uri::purl
+}
+
+// some examples for textmate
+
+pattern with-ancestors<A> = {
+  ancestors?: list::all<A>
+}
