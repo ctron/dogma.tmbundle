@@ -3,7 +3,7 @@
   "displayName": "Seedwing Dogma Syntax",
   "license": "Apache-2.0",
   "version": "0.0.1",
-  "publisher": "Seedwing project",
+  "publisher": "ctron",
   "repository": {
     "type": "git",
     "url": "https://github.com/ctron/dogma.tmbundle"
