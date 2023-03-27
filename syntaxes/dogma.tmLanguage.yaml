@@ -13,6 +13,7 @@ repository:
   root:
     patterns:
       - include: "#comments"
+      - include: "#attributes"
 
       - name: "meta.pattern"
         match: >-
@@ -62,6 +63,7 @@ repository:
     begin: \{
     end: \}
     patterns:
+      - include: "#attributes"
       - include: "#object-field"
       - include: "#comments"
 
@@ -94,3 +96,42 @@ repository:
     name: "comment.line.double-slash"
     match: >-
       //.*$
+
+  attributes:
+    begin: >-
+      #(\[)([a-zA-Z]+[a-zA-Z_-]*)
+    beginCaptures:
+      1:
+        name: "punctuation.definition.arguments.begin"
+      2:
+        name: "keyword.other.attribute-name.dogma"
+    end: >-
+      (\])
+    endCaptures:
+      1:
+        name: "punctuation.definition.arguments.end"
+    patterns:
+      - include: "#attributes-content"
+
+  attributes-content:
+    begin: >-
+      \(
+    end: >-
+      \)
+    patterns:
+      - include: "#attributes-item"
+      - include: "#string-literal"
+
+  attributes-item:
+    match: >-
+      [a-zA-Z]+(=[a-zA-Z]+)?,?
+    name: constant.other
+
+  string-literal:
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double.dogma"
+    patterns:
+
+      - name: "constant.character.escape.dogma"
+        match: "\\\\[\"\\\\]"
