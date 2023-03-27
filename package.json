@@ -1,12 +1,13 @@
 {
   "name": "seedwing-dogma-syntax",
   "displayName": "Seedwing Dogma Syntax",
+  "description": "Language grammar for Seedwing's Dogma language",
   "license": "Apache-2.0",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "ctron",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ctron/dogma.tmbundle"
+    "url": "https://github.com/seedwing-io/seedwing-dogma-syntax"
   },
   "engines": {
     "vscode": "^1.43.0"
