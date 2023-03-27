@@ -2,7 +2,7 @@
   "name": "seedwing-dogma-syntax",
   "displayName": "Seedwing Dogma Syntax",
   "license": "Apache-2.0",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ctron",
   "repository": {
     "type": "git",
@@ -37,6 +37,6 @@
   },
   "devDependencies": {
     "js-yaml": "^4.1.0",
-    "vsce": "^2.15.0"
+    "@vscode/vsce": "^2.18.0"
   }
 }
