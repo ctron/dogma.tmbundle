@@ -129,7 +129,7 @@ repository:
 
   string-literal:
     begin: "\""
-    end: "\""
+    end: "\",?"
     name: "string.quoted.double.dogma"
     patterns:
 
