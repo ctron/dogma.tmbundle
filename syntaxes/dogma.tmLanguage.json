@@ -18,6 +18,9 @@
           "include": "#comments"
         },
         {
+          "include": "#use"
+        },
+        {
           "include": "#attributes"
         },
         {
@@ -102,6 +105,18 @@
         }
       ]
     },
+    "use": {
+      "name": "meta.import.dogma",
+      "match": "(?x)\n  (use)\n  \\s+\n  ([a-zA-Z@\\-_]+(::([a-zA-Z@\\-_]+))*)\n  \\s*",
+      "captures": {
+        "1": {
+          "name": "keyword.other"
+        },
+        "2": {
+          "name": "entity.type.name"
+        }
+      }
+    },
     "comments": {
       "patterns": [
         {
@@ -114,7 +129,7 @@
       "match": "//.*$"
     },
     "attributes": {
-      "begin": "#(\\[)([a-zA-Z]+[a-zA-Z_-]*)",
+      "begin": "(#\\[)([a-zA-Z]+[a-zA-Z_-]*)",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.arguments.begin"

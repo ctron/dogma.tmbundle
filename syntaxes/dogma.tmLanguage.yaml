@@ -13,8 +13,10 @@ repository:
   root:
     patterns:
       - include: "#comments"
-      - include: "#attributes"
 
+      - include: "#use"
+
+      - include: "#attributes"
       - name: "meta.pattern"
         match: >-
           (?x)
@@ -87,6 +89,20 @@ repository:
         name: "storage.modifier"
     patterns:
       - include: "#matching"
+
+  use:
+    name: "meta.import.dogma"
+    match: >-
+      (?x)
+        (use)
+        \s+
+        ([a-zA-Z@\-_]+(::([a-zA-Z@\-_]+))*)
+        \s*
+    captures:
+      1:
+        name: "keyword.other"
+      2:
+        name: "entity.type.name"
 
   comments:
     patterns:
