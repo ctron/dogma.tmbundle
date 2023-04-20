@@ -3,7 +3,7 @@
   "displayName": "Seedwing Dogma Syntax",
   "description": "Language grammar for Seedwing's Dogma language",
   "license": "Apache-2.0",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "publisher": "ctron",
   "repository": {
     "type": "git",
