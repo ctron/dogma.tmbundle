@@ -115,7 +115,7 @@ repository:
 
   attributes:
     begin: >-
-      #(\[)([a-zA-Z]+[a-zA-Z_-]*)
+      (#\[)([a-zA-Z]+[a-zA-Z_-]*)
     beginCaptures:
       1:
         name: "punctuation.definition.arguments.begin"
